@@ -1,0 +1,5 @@
+.table__icon-set {
+  display: flex;
+  justify-content: right;
+  border: 1px solid darkcyan;
+}

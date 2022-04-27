@@ -1,0 +1,5 @@
+.table__head {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgoldenrodyellow;
+}

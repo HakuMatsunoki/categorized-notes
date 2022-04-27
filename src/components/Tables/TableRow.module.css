@@ -1,0 +1,20 @@
+.table__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table__column {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border: 1px solid darkcyan;
+  word-break: break-all;
+}
+
+.table__row {
+  font-size: 1.8rem;
+  background-color: lightsalmon;
+}
+
+.table__row:nth-child(2n) {
+  background-color: lightskyblue;
+}
