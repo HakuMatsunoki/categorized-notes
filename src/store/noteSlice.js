@@ -8,8 +8,8 @@ const noteSlice = createSlice({
     notes: []
   },
   reducers: {
-    replaceNotes(state, actions) {
-      state.notes = actions.payload.map((note) => {
+    replaceNotes(state, action) {
+      state.notes = action.payload.map((note) => {
         note.dates = findDates(note.content);
 
         return note;

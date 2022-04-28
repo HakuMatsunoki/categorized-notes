@@ -1,4 +1,5 @@
 import { noteActions } from './noteSlice';
+import { uiActions } from './uiSlice';
 import fetchData from '../helpers/fetchData';
 
 export const fetchNotes = () => {
@@ -10,7 +11,11 @@ export const fetchNotes = () => {
 
       dispatch(noteActions.replaceNotes(notes));
     } catch (err) {
-      console.log(err);
+      dispatch(uiActions.setError({ message: err.message, show: true }));
+
+      setTimeout(() => {
+        dispatch(uiActions.hideError());
+      }, 4000);
     }
   };
 };
@@ -40,7 +45,11 @@ export const addNote = (note) => {
 
       dispatch(id ? noteActions.editNote(noteData) : noteActions.addNote(noteData));
     } catch (err) {
-      console.log(err);
+      dispatch(uiActions.setError({ message: err.message, show: true }));
+
+      setTimeout(() => {
+        dispatch(uiActions.hideError());
+      }, 4000);
     }
   };
 };
@@ -64,7 +73,11 @@ export const archiveAllNotes = (archivate) => {
 
       dispatch(noteActions.archiveAllNotes(archivate));
     } catch (err) {
-      console.log(err);
+      dispatch(uiActions.setError({ message: err.message, show: true }));
+
+      setTimeout(() => {
+        dispatch(uiActions.hideError());
+      }, 4000);
     }
   };
 };
@@ -85,7 +98,11 @@ export const deleteNotes = (archived) => {
 
       dispatch(noteActions.deleteNotes(archived));
     } catch (err) {
-      console.log(err.message);
+      dispatch(uiActions.setError({ message: err.message, show: true }));
+
+      setTimeout(() => {
+        dispatch(uiActions.hideError());
+      }, 4000);
     }
   };
 };
@@ -107,7 +124,11 @@ export const archiveNote = (id, archivate) => {
 
       dispatch(noteActions.archiveNote({ id, archivate }));
     } catch (err) {
-      console.log(err);
+      dispatch(uiActions.setError({ message: err.message, show: true }));
+
+      setTimeout(() => {
+        dispatch(uiActions.hideError());
+      }, 4000);
     }
   };
 };
@@ -123,7 +144,11 @@ export const deleteNote = (id) => {
 
       dispatch(noteActions.deleteNote(id));
     } catch (err) {
-      console.log(err);
+      dispatch(uiActions.setError({ message: err.message, show: true }));
+
+      setTimeout(() => {
+        dispatch(uiActions.hideError());
+      }, 4000);
     }
   };
 };

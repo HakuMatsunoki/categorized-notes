@@ -8,7 +8,9 @@ const fetchData = async (link, options = {}) => {
   const response = await fetch(link, options);
 
   if (!response.ok) {
-    throw new Error(response.error);
+    const error = await response.json();
+
+    throw new Error(error.message);
   }
 
   if (response.status === 204) return;

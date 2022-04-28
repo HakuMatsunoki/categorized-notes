@@ -1,0 +1,27 @@
+.error {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  border: orangered 1px solid;
+  color: orangered;
+  padding: 12px 30px;
+  text-align: center;
+  transition: transform 2s ease;
+}
+
+.error h2 {
+  font-size: 20px;
+  padding-bottom: 9px;
+}
+
+.error p {
+  font-size: 12px;
+}
+
+.show {
+  transform: translate(-50%, -2px);
+}
+
+.hide {
+  transform: translate(-50%, -100%);
+}
