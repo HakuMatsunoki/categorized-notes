@@ -6,14 +6,28 @@ const uiSlice = createSlice({
     error: {
       message: '',
       show: false
+    },
+    info: {
+      message: '',
+      title: '',
+      show: false
     }
   },
   reducers: {
     setError(state, action) {
-      state.error = action.payload;
+      state.error.message = action.payload.message;
+      state.error.show = true;
     },
     hideError(state) {
       state.error.show = false;
+    },
+    setInfo(state, action) {
+      state.info.message = action.payload.message;
+      state.info.title = action.payload.title;
+      state.info.show = true;
+    },
+    hideInfo(state) {
+      state.info.show = false;
     }
   }
 });
