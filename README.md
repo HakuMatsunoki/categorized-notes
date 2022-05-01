@@ -1,7 +1,7 @@
 # Categorized notes react app
 
 This demo project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-You can create, edit and categorize your own notes and save data.
+You can create, edit, categorize your own notes and save data on the server.
 
 ### Available Scripts
 
