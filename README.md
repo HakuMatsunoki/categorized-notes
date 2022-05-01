@@ -20,4 +20,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 Your app is ready to be deployed!
 
 ### Server 
-This is frontend part. You can find backend part of this application [here](https://github.com/HakuMatsunoki/categorized-notes-api).
+This is frontend part connected with backend part deployed on the Heroku. You can find source code of backend part [here](https://github.com/HakuMatsunoki/categorized-notes-api). Please, be free to edit code of this app and to use you own server.
